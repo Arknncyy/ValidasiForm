@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran Mahasiswa Baru - Universitas Sanata Dharma</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-container">
+      <h1>UNIVERSITAS SANATA DHARMA</h1>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#pendaftaran">Formulir Pendaftaran</a></li>
+      <li><a href="#petunjuk">Petunjuk</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+
+    <section id="petunjuk" class="card-section">
+      <h2>Petunjuk Pengisian</h2>
+      <ol>
+        <li>Isilah data di bawah ini dengan jelas dan lengkap.</li>
+        <li>Isi seluruh kolom yang ditandai bintang (*) sebelum mengirim formulir.</li>
+      </ol>
+    </section>
+
+    <section id="pendaftaran" class="card-section">
+      <header class="section-header">
+        <h2>FORMULIR PENDAFTARAN MAHASISWA BARU</h2>
+      </header>
+
+      <form id="form-pendaftaran" class="form-container" novalidate>
+        
+        <fieldset class="form-fieldset">
+          <legend>A. Data Calon Mahasiswa dan Orangtua/Wali</legend>
+
+          <div class="form-group">
+            <label for="nama-lengkap">1. Nama Lengkap (sesuai STTB/STK) *</label>
+            <input type="text" id="nama-lengkap" placeholder="Masukkan nama lengkap" required minlength="3" maxlength="60">
+            <span class="pesan-error" id="error-nama-lengkap"></span>
+          </div>
+
+          <div class="form-group">
+            <label>2. Jenis Kelamin *</label>
+            <div class="radio-group">
+              <label><input type="radio" name="jenis_kelamin" value="Perempuan" required> Perempuan</label>
+              <label><input type="radio" name="jenis_kelamin" value="Laki-laki"> Laki-laki</label>
+            </div>
+            <span class="pesan-error" id="error-jenis-kelamin"></span>
+          </div>
+
+          <div class="form-group">
+            <label>3. Status *</label>
+            <div class="radio-group">
+              <label><input type="radio" name="status" value="Belum Menikah" required> Belum Menikah</label>
+              <label><input type="radio" name="status" value="Menikah"> Menikah</label>
+              <label><input type="radio" name="status" value="Biarawan/Biarawati"> Biarawan/Biarawati</label>
+            </div>
+            <span class="pesan-error" id="error-status"></span>
+          </div>
+
+          <div class="form-group">
+            <label>4. Agama *</label>
+            <div class="radio-group">
+              <label><input type="radio" name="agama" value="Islam" required> Islam</label>
+              <label><input type="radio" name="agama" value="Katolik"> Katolik</label>
+              <label><input type="radio" name="agama" value="Kristen"> Kristen</label>
+              <label><input type="radio" name="agama" value="Budha"> Budha</label>
+              <label><input type="radio" name="agama" value="Hindu"> Hindu</label>
+              <label><input type="radio" name="agama" value="Lain-lain"> Lain-lain</label>
+            </div>
+            <span class="pesan-error" id="error-agama"></span>
+          </div>
+
+          <div class="form-group">
+            <label>5. Kewarganegaraan *</label>
+            <div class="radio-group">
+              <label><input type="radio" name="kewarganegaraan" value="WNI" required> WNI</label>
+              <label><input type="radio" name="kewarganegaraan" value="WNA"> WNA</label>
+            </div>
+            <span class="pesan-error" id="error-kewarganegaraan"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="alamat-surat">6. Alamat Surat *</label>
+            <textarea id="alamat-surat" placeholder="Alamat yang mudah dijangkau Pos..." required minlength="10"></textarea>
+            <span class="pesan-error" id="error-alamat-surat"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="alamat-asal">7. Alamat Asal *</label>
+            <textarea id="alamat-asal" placeholder="Alamat asal daerah..." required minlength="10"></textarea>
+            <span class="pesan-error" id="error-alamat-asal"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col">
+              <label for="kabupaten">Kabupaten/Kota *</label>
+              <input type="text" id="kabupaten" placeholder="Kabupaten / Kota" required minlength="3">
+              <span class="pesan-error" id="error-kabupaten"></span>
+            </div>
+            <div class="form-group col">
+              <label for="propinsi">Propinsi *</label>
+              <input type="text" id="propinsi" placeholder="Propinsi" required minlength="3">
+              <span class="pesan-error" id="error-propinsi"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col">
+              <label for="telepon">8. No. Telepon Rumah</label>
+              <input type="tel" id="telepon" placeholder="Contoh: 0274123456" pattern="[0-9]*">
+              <span class="pesan-error" id="error-telepon"></span>
+            </div>
+            <div class="form-group col">
+              <label for="hp">No. HP *</label>
+              <input type="tel" id="hp" placeholder="Contoh: 08123456789" required pattern="08[0-9]{8,11}">
+              <span class="pesan-error" id="error-hp"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">9. Alamat E-mail *</label>
+            <input type="email" id="email" placeholder="nama@domain.com" required>
+            <span class="pesan-error" id="error-email"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="nama-ortu">10. Nama Orang Tua/Wali *</label>
+            <input type="text" id="nama-ortu" placeholder="Nama ayah/ibu/wali" required minlength="3">
+            <span class="pesan-error" id="error-nama-ortu"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="pendidikan-ortu">Tingkat Pendidikan Orang Tua/Wali *</label>
+            <select id="pendidikan-ortu" required>
+              <option value="">-- Pilih Tingkat Pendidikan --</option>
+              <option value="Tidak lulus SD">Tidak Lulus SD</option>
+              <option value="SD">SD</option>
+              <option value="SLTP">SLTP</option>
+              <option value="SMA">SMA</option>
+              <option value="Diploma">Diploma</option>
+              <option value="Sarjana Muda">Sarjana Muda</option>
+              <option value="Sarjana">Sarjana</option>
+              <option value="Magister">Magister</option>
+              <option value="Doktor">Doktor</option>
+            </select>
+            <span class="pesan-error" id="error-pendidikan-ortu"></span>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+          <legend>B. Program Studi Yang Dipilih</legend>
+          
+          <div class="form-group">
+            <label for="pilihan-1">Pilihan I *</label>
+            <select id="pilihan-1" required>
+              <option value="">-- Pilih Program Studi --</option>
+              <option value="Informatika">S1 - Teknik Informatika</option>
+              <option value="Teknik Elektro">S1 - Teknik Elektro</option>
+              <option value="Teknik Mesin">S1 - Teknik Mesin</option>
+              <option value="Mekatronika">D3 - Mekatronika</option>
+              <option value="Farmasi">S1 - Farmasi</option>
+              <option value="Psikologi">S1 - Psikologi</option>
+              <option value="Akuntansi">S1 - Akuntansi</option>
+              <option value="Manajemen">S1 - Manajemen</option>
+            </select>
+            <span class="pesan-error" id="error-pilihan-1"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="pilihan-2">Pilihan II</label>
+            <select id="pilihan-2">
+              <option value="">-- Pilih Program Studi --</option>
+              <option value="Informatika">S1 - Teknik Informatika</option>
+              <option value="Teknik Elektro">S1 - Teknik Elektro</option>
+              <option value="Teknik Mesin">S1 - Teknik Mesin</option>
+              <option value="Mekatronika">D3 - Mekatronika</option>
+              <option value="Farmasi">S1 - Farmasi</option>
+              <option value="Psikologi">S1 - Psikologi</option>
+              <option value="Akuntansi">S1 - Akuntansi</option>
+              <option value="Manajemen">S1 - Manajemen</option>
+            </select>
+            <span class="pesan-error" id="error-pilihan-2"></span>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+          <legend>C. Data SMA / SMK / SMF / MAN</legend>
+
+          <div class="form-group">
+            <label for="nama-sekolah">1. Nama Sekolah Menengah *</label>
+            <input type="text" id="nama-sekolah" placeholder="Nama SMA/SMK asal" required minlength="3">
+            <span class="pesan-error" id="error-nama-sekolah"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="jurusan-sekolah">2. Jurusan Sekolah *</label>
+            <select id="jurusan-sekolah" required>
+              <option value="">-- Pilih Jurusan --</option>
+              <option value="SMA IPA">SMA IPA</option>
+              <option value="SMA IPS">SMA IPS</option>
+              <option value="SMA Bahasa">SMA Bahasa</option>
+              <option value="SMK Teknik">SMK Teknik</option>
+              <option value="SMK Ekonomi">SMK Ekonomi</option>
+              <option value="Lain-lain">Lain-lain</option>
+            </select>
+            <span class="pesan-error" id="error-jurusan-sekolah"></span>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+          <legend>Pernyataan Keabsahan Data</legend>
+          <div class="form-group checkbox-group">
+            <label for="pernyataan">
+              <input type="checkbox" id="pernyataan" required>
+              Saya menyatakan dengan sesungguhnya bahwa data yang saya isikan dalam formulir ini adalah benar. *
+            </label>
+            <span class="pesan-error" id="error-pernyataan"></span>
+          </div>
+        </fieldset>
+
+        <button type="submit" id="btn-submit" class="btn-primary">Kirim Pendaftaran</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Universitas Sanata Dharma Yogyakarta.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
